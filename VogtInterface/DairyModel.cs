@@ -4,7 +4,7 @@ using System.Text;
 
 namespace VogtInterface
 {
-    class DiaryModel: IDairyModel
+    class DairyModel: IDairyModel
     {
         public string Name { get; set; }
         public decimal Price { get; set; }
