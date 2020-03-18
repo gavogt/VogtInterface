@@ -2,7 +2,7 @@
 {
     interface IProductsModel
     {
-        string ItemName { get; set; }
-        string ItemPrice { get; set; }
+        public string Name { get; set; }
+        public decimal Price { get; set; }
     }
 }
