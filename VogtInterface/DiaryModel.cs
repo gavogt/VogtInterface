@@ -4,11 +4,10 @@ using System.Text;
 
 namespace VogtInterface
 {
-    class Diary
+    class DiaryModel
     {
-        string name;
-        decimal price;
-        string shelfLife;
+
+        string itemShelfLife;
 
     }
 }

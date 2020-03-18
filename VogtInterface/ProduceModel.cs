@@ -4,10 +4,8 @@ using System.Text;
 
 namespace VogtInterface
 {
-    class Meat
+    class ProduceModel
     {
-        string name;
-        decimal price;
-        string type;
+        string itemPackage;
     }
 }
