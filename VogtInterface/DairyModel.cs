@@ -4,10 +4,25 @@ using System.Text;
 
 namespace VogtInterface
 {
-    class DairyModel: IDairyModel
+    class DairyModel : ProductsBase, IDairyModel
     {
         public string Name { get; set; }
         public decimal Price { get; set; }
         public string ShelfLife { get; set; }
+
+        public override void PrintProductDetails(List<IProductsModel> products)
+        {
+            foreach (var product in products)
+            {
+                Console.WriteLine(" ");
+                Console.WriteLine($"Product name: {product.Name}");
+                Console.WriteLine($"Product price: {product.Price:C2}");
+
+                if (product is IDairyModel dairy)
+                {
+                    Console.WriteLine($"Shelf life: {dairy.ShelfLife}");
+                }
+            }
+        }
     }
 }

@@ -8,32 +8,14 @@ namespace VogtInterface
         static void Main(string[] args)
         {
             List<IProductsModel> products = new List<IProductsModel>();
+            MeatModel meatModel = new MeatModel();
 
             products = AddSampleData();
-            foreach (var product in products)
-            {
-                Console.WriteLine(" ");
-                Console.WriteLine($"Product name: {product.Name}");
-                Console.WriteLine($"Product price: {product.Price:C2}");
-
-                if (product is IMeatModel meat)
-                {
-                    Console.WriteLine($"Meat type: {meat.Type}");
-                }
-                if (product is IDairyModel dairy)
-                {
-                    Console.WriteLine($"Shelf life: {dairy.ShelfLife}");
-                }
-                if (product is IProduceModel produce)
-                {
-                    Console.WriteLine($"Packaging: {produce.Package}");
-                }
-
-            }
+            meatModel.PrintProductDetails(products);
 
         }
 
-        private static List<IProductsModel> AddSampleData()
+        public static List<IProductsModel> AddSampleData()
         {
             List<IProductsModel> sampleData = new List<IProductsModel>();
 
