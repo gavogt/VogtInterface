@@ -6,6 +6,6 @@ namespace VogtInterface
 {
     abstract class ProductsBase
     {
-        public abstract void PrintProductDetails(List<IProductsModel> products);
+        public abstract void PrintProductSpecificDetails();
     }
 }

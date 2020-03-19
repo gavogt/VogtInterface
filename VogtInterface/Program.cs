@@ -7,29 +7,15 @@ namespace VogtInterface
     {
         static void Main(string[] args)
         {
-            List<IProductsModel> products = new List<IProductsModel>();
 
-            MeatModel meatModel = new MeatModel();
-            DairyModel dairyModel = new DairyModel();
-            ProduceModel produceModel = new ProduceModel();
+            MeatModel meatModel = new MeatModel { Name = "Chicken", Price = 8.00m, Type = "Chicken" };
+            DairyModel dairyModel = new DairyModel { Name = "Milk", Price = 3.50m, ShelfLife = "2 weeks" };
+            ProduceModel produceModel = new ProduceModel { Name = "Apple", Price = 1.50m, Package = "None" };
 
-            products = AddSampleData();
+            dairyModel.PrintProductDetails();
+            meatModel.PrintProductDetails();
+            produceModel.PrintProductDetails();
 
-            dairyModel.PrintProductDetails(products);
-            meatModel.PrintProductDetails(products);
-            produceModel.PrintProductDetails(products);
-
-        }
-
-        public static List<IProductsModel> AddSampleData()
-        {
-            List<IProductsModel> sampleData = new List<IProductsModel>();
-
-            sampleData.Add(new MeatModel { Name = "Chicken", Price = 8.00m, Type = "Chicken" });
-            sampleData.Add(new ProduceModel { Name = "Apple", Price = 1.50m, Package = "None" });
-            sampleData.Add(new DairyModel { Name = "Milk", Price = 3.50m, ShelfLife = "2 weeks" });
-
-            return sampleData;
         }
     }
 }

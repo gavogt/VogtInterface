@@ -10,18 +10,17 @@ namespace VogtInterface
         public decimal Price { get; set; }
         public string Package { get; set; }
 
-        public override void PrintProductDetails(List<IProductsModel> products)
+        public void PrintProductDetails()
         {
-            foreach (var product in products)
-            {
-                if (product is IProduceModel produce)
-                {
-                    Console.WriteLine(" ");
-                    Console.WriteLine($"Product name: {product.Name}");
-                    Console.WriteLine($"Product price: {product.Price:C2}");
-                    Console.WriteLine($"Packaging: {produce.Package}");
-                }
-            }
+            Console.WriteLine();
+            Console.WriteLine($"Product name: {Name}");
+            Console.WriteLine($"Product price: {Price:C2}");
+            PrintProductSpecificDetails();
+        }
+
+        public override void PrintProductSpecificDetails()
+        {
+            Console.WriteLine($"Package type: {Package}");
         }
     }
 }
