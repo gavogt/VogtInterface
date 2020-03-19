@@ -14,12 +14,11 @@ namespace VogtInterface
         {
             foreach (var product in products)
             {
-                Console.WriteLine(" ");
-                Console.WriteLine($"Product name: {product.Name}");
-                Console.WriteLine($"Product price: {product.Price:C2}");
-
                 if (product is IDairyModel dairy)
                 {
+                    Console.WriteLine(" ");
+                    Console.WriteLine($"Product name: {product.Name}");
+                    Console.WriteLine($"Product price: {product.Price:C2}");
                     Console.WriteLine($"Shelf life: {dairy.ShelfLife}");
                 }
             }

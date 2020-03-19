@@ -8,10 +8,16 @@ namespace VogtInterface
         static void Main(string[] args)
         {
             List<IProductsModel> products = new List<IProductsModel>();
+
             MeatModel meatModel = new MeatModel();
+            DairyModel dairyModel = new DairyModel();
+            ProduceModel produceModel = new ProduceModel();
 
             products = AddSampleData();
+
+            dairyModel.PrintProductDetails(products);
             meatModel.PrintProductDetails(products);
+            produceModel.PrintProductDetails(products);
 
         }
 
