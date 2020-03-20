@@ -4,7 +4,7 @@ using System.Text;
 
 namespace VogtInterface
 {
-    interface IProduceModel : IProductsModel
+    interface IProduceModel
     {
         public string Package { get; set; }
     }
