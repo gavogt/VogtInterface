@@ -4,10 +4,14 @@ using System.Text;
 
 namespace VogtInterface
 {
-    class DairyModel: IDairyModel
+    class DairyModel : ProductsBase, IDairyModel
     {
-        public string Name { get; set; }
-        public decimal Price { get; set; }
+
         public string ShelfLife { get; set; }
+
+        public override void PrintProductSpecificDetails()
+        {
+            Console.WriteLine($"Shelf Life type: {ShelfLife}");
+        }
     }
 }

@@ -4,10 +4,13 @@ using System.Text;
 
 namespace VogtInterface
 {
-    class ProduceModel : IProduceModel
+    class ProduceModel : ProductsBase, IProduceModel
     {
-        public string Name { get; set; }
-        public decimal Price { get; set; }
         public string Package { get; set; }
+
+        public override void PrintProductSpecificDetails()
+        {
+            Console.WriteLine($"Package type: {Package}");
+        }
     }
 }

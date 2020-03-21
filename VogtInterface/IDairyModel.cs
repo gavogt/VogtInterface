@@ -4,7 +4,7 @@ using System.Text;
 
 namespace VogtInterface
 {
-    interface IDairyModel : IProductsModel
+    interface IDairyModel
     {
         public string ShelfLife { get; set; }
     }

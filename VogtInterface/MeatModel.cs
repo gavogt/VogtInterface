@@ -4,10 +4,15 @@ using System.Text;
 
 namespace VogtInterface
 {
-    class MeatModel : IMeatModel
+    class MeatModel : ProductsBase, IMeatModel
     {
-        public string Name { get; set; }
-        public decimal Price { get; set; }
+
         public string Type { get; set; }
+
+        public override void PrintProductSpecificDetails()
+        {
+            Console.WriteLine($"Meat type: {Type}");
+        }
+
     }
 }
